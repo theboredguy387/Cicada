@@ -13,13 +13,7 @@ setInterval(tick, 1000);
 const status = document.getElementById("status");
 const rotator = document.getElementById("rotator");
 
-const taunts = [
-  "Refused.",
-  "No.",
-  "You can't close it.",
-  "It's still here.",
-  "Try again."
-];
+const taunts = ["Refused.", "No.", "You can't close it.", "It's still here.", "Try again."];
 const rotators = [
   "You won't hear it coming.",
   "It was already here.",
