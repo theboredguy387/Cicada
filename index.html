@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cicada</title>
+<meta name="description" content="Seventeen years underground.">
+<meta name="theme-color" content="#0a0f0a">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="desktop">
+  <div class="glow" aria-hidden="true"></div>
+
+  <main class="window" role="main">
+
+    <div class="titlebar">
+      <h1 class="titlebar__text">Cicada</h1>
+      <div class="titlebar__buttons">
+        <button class="sysbtn" type="button" aria-label="Minimise"><span class="sysbtn__glyph sysbtn__glyph--min"></span></button>
+        <button class="sysbtn" type="button" aria-label="Maximise"><span class="sysbtn__glyph sysbtn__glyph--max"></span></button>
+        <button class="sysbtn sysbtn--danger" type="button" id="close-btn"><span class="sysbtn__glyph sysbtn__glyph--close"></span></button>
+      </div>
+    </div>
+
+    <div class="window__body">
+      <div class="portrait">
+        <svg class="portrait__img" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <radialGradient id="wing" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#3a4a2a" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#1a2010" stop-opacity="0.3"/>
+            </radialGradient>
+          </defs>
+          <!-- wings -->
+          <ellipse cx="60" cy="90" rx="48" ry="20" transform="rotate(-25 60 90)" fill="url(#wing)" stroke="#5a6b3a" stroke-width="0.8"/>
+          <ellipse cx="140" cy="90" rx="48" ry="20" transform="rotate(25 140 90)" fill="url(#wing)" stroke="#5a6b3a" stroke-width="0.8"/>
+          <ellipse cx="70" cy="115" rx="40" ry="14" transform="rotate(-20 70 115)" fill="url(#wing)" stroke="#5a6b3a" stroke-width="0.6" opacity="0.7"/>
+          <ellipse cx="130" cy="115" rx="40" ry="14" transform="rotate(20 130 115)" fill="url(#wing)" stroke="#5a6b3a" stroke-width="0.6" opacity="0.7"/>
+          <!-- body -->
+          <ellipse cx="100" cy="100" rx="14" ry="40" fill="#2a1f14"/>
+          <ellipse cx="100" cy="70" rx="11" ry="12" fill="#1a1208"/>
+          <!-- eyes -->
+          <circle cx="93" cy="66" r="3.5" fill="#d4a840"/>
+          <circle cx="107" cy="66" r="3.5" fill="#d4a840"/>
+          <circle cx="93" cy="66" r="1.2" fill="#0a0f0a"/>
+          <circle cx="107" cy="66" r="1.2" fill="#0a0f0a"/>
+          <!-- legs -->
+          <path d="M88 90 L70 105 M88 100 L68 118 M88 110 L72 130" stroke="#2a1f14" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M112 90 L130 105 M112 100 L132 118 M112 110 L128 130" stroke="#2a1f14" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <!-- abdomen -->
+          <ellipse cx="100" cy="135" rx="9" ry="18" fill="#1a1208" opacity="0.9"/>
+        </svg>
+      </div>
+
+      <div class="pitch">
+        <p class="pitch__eyebrow">v1</p>
+        <p class="pitch__tagline">Seventeen years underground. Emerges when it wants.</p>
+        <p class="pitch__rotator" id="rotator">You won't hear it coming.</p>
+
+        <div class="downloads">
+          <a class="btn" href="cicada.exe" download>
+            <span class="btn__label">Download for Windows</span>
+            <span class="btn__meta">.exe · 83 MB</span>
+          </a>
+        </div>
+
+        <p class="pitch__note" id="status">It was already here.</p>
+      </div>
+    </div>
+
+    <div class="taskbar">
+      <span class="taskbar__start">
+        <span class="taskbar__flag"></span>
+        <span class="taskbar__word">start</span>
+      </span>
+      <span class="taskbar__item taskbar__item--active">cicada.exe</span>
+      <span class="taskbar__spacer"></span>
+      <span class="taskbar__clock" id="clock">--:--</span>
+    </div>
+
+  </main>
+
+  <p class="colophon">no uninstaller · no terms of service · no explanation</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
